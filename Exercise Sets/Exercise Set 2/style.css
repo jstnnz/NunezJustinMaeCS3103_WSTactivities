@@ -1,1 +1,35 @@
 
+.float-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body{
+    background-color: #ffd3da;
+    text-align: center;
+}
+
+.float-child{
+    width: 270px;
+    height: 180px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    background-color: #ff8fab;
+    font-size: small;
+}
+
+p, h4 {
+   text-align: center;
+}
+
+.material-symbols-outlined {
+    width: 25px; 
+    height: 25px;
+    display: flex;
+    margin: 0 auto 10px auto; 
+}
