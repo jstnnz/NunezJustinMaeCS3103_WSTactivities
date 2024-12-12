@@ -1,1 +1,77 @@
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(45deg, #ffe6f2, #f8bbd0, #f48fb1, #f06292);
+    background-size: 300% 300%;
+    animation: gradient-animation 10s ease infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.vision-board {
+    background: #fff0f6;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.vision-board:hover {
+    transform: scale(1.05);
+}
+
+.header {
+    text-align: center;
+    color: #d81b60;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    margin: 10px 0;
+    color: #ad1457;
+    font-size: 1.4em;
+    animation: fade-in 2s ease;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
