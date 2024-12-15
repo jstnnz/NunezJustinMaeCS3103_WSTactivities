@@ -1,233 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class Schedule</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #FFF4EC; 
-            color: #58545F; 
-        }
-
-        header {
-            background: #FFC5A6; 
-            text-align: center;
-            padding: 20px;
-            color: #58545F; 
-            border-bottom: 5px solid #FDAC98; 
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            background: #FFFFFF;
-            border: 2px solid #A97882; 
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            text-align: center;
-            padding: 15px;
-            border: 1px solid #A97882; 
-        }
-
-        th {
-            background: linear-gradient(to bottom, #FFC5A6, #FDAC98); 
-            color: #FFF4EC;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .time-slot {
-            background: #FFE8DF; 
-            font-weight: bold;
-            color: #58545F; 
-            border-radius: 15px; 
-            padding: 10px 15px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-            margin: 5px 0;
-            text-align: center;
-            width: 90px; 
-        }
-
-        .time-slot:first-child {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-
-        .time-slot:last-child {
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        .class-block {
-            background: #DC8E90; 
-            color: #FFF4EC;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .class-block:hover {
-            transform: scale(1.05);
-            background: #A97882; 
-            color: #FFF4EC;
-        }
-
-        .animated-row {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .animated-row:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .animated-row:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        .animated-row:nth-child(4) {
-            animation-delay: 0.6s;
-        }
-        .animated-row:nth-child(5) {
-            animation-delay: 0.8s;
-        }
-        .animated-row:nth-child(6) {
-            animation-delay: 1s;
-        }
-
-        footer {
-            background: #FDAC98; 
-            color: #FFF4EC;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        .course-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .course-list li {
-            margin: 5px 0;
-            font-weight: bold;
-            color: #FFF4EC;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+        color: #4a4a4a;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #fedcdc;
+        color: #4a4a4a;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      header h2 {
+        font-size: 20px;
+        font-style: italic;
+      }
+      table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      th, td {
+        border: 1px solid #fedcdc;
+        padding: 12px;
+        text-align: center;
+        background-color: #fff4f5;
+        color: #4a4a4a;
+      }
+      th {
+        background-color: #fcd6d8;
+        color: #4a4a4a;
+      }
+      tr:nth-child(even) {
+        background-color: #fff1f2;
+      }
+      .cs415 {
+        background-color: #eec5c5;
+        color: #4a4a4a;
+        font-weight: bold;
+      }
+      .cs311 {
+        background-color: #d9848a;
+        color: #4a4a4a;
+        font-weight: bold;
+      }
+      .it314 {
+        background-color: #ffd9de;
+        color: #4a4a4a;
+        font-weight: bold;
+      }
+      .cs312 {
+        background-color: #db9fa8;
+        color: #4a4a4a;
+        font-weight: bold;
+      }
+      footer {
+        padding: 20px;
+        background-color: #fedcdc;
+        color: #4a4a4a;
+        text-align: left;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+      }
+      footer ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      footer li {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+      }
+      footer li::before {
+        content: '\1F4D6';
+        margin-right: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Class Schedule</h1>
+      <h1>CLASS SCHEDULE</h1>
+      <h2>FIRST SEMESTER, AY 2024-2025</h2>
     </header>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>TIME</th>
+            <th>MONDAY</th>
+            <th>TUESDAY</th>
+            <th>WEDNESDAY</th>
+            <th>THURSDAY</th>
+            <th>FRIDAY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7:00 - 8:00</td>
+            <td rowspan="3" class="cs415">CS 415<br />104</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>8:00 - 8:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>8:30 - 9:00</td>
+            <td rowspan="3" class="cs311">CS 311<br />402</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>9:00 - 9:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>9:30 - 10:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>10:00 - 10:30</td>
+            <td>&nbsp;</td>
+            <td rowspan="6" class="it314">IT 314<br />Lab 3</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>10:30 - 11:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>11:00 - 11:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td rowspan="4" class="it314">IT 314<br />103</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>11:30 - 12:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>12:00 - 12:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>12:30 - 1:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>1:00 - 1:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td rowspan="10" class="cs312">CS 312<br />Lab 3</td>
+          </tr>
+          <tr>
+            <td>1:30 - 2:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>2:00 - 2:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>2:30 - 3:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td rowspan="3" class="cs311">CS 311<br />103</td>
+          </tr>
+          <tr>
+            <td>3:00 - 3:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>3:30 - 4:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>4:00 - 4:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>4:30 - 5:00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>5:00 - 5:30</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td
+          </tr>
 
-    <main>
-        <section class="schedule">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="animated-row">
-                        <td class="time-slot">7:00 AM</td>
-                        <td class="class-block">App Development (APDEV)<br>7:00-12:00 PM</td>
-                        <td class="class-block">Human Computer Interaction (102)<br>7:00-8:30 AM</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="animated-row">
-                        <td class="time-slot">8:30 AM</td>
-                        <td></td>
-                        <td class="class-block">Automata Theory (102)<br>8:30-10:00 AM</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="animated-row">
-                        <td class="time-slot">10:00 AM</td>
-                        <td></td>
-                        <td class="class-block">Web Systems & Technologies (LAB3)<br>10:00-1:00 PM</td>
-                        <td></td>
-                        <td class="class-block">Web Systems & Technologies (103)<br>11:00-1:00 PM</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="animated-row">
-                        <td class="time-slot">2:30 PM</td>
-                        <td class="class-block">Human Computer Interaction (102)<br>2:30-4:00 PM</td>
-                        <td></td>
-                        <td></td>
-                        <td class="class-block">Automata Theory (103)<br>2:30-4:00 PM</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="animated-row">
-                        <td class="time-slot">7:00 PM</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="animated-row">
-                        <td class="time-slot">1:00 AM</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="class-block">Mobile Computing (103)<br>1:00-4:00 AM</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <footer>
-            <h2>Course List</h2>
-            <ul class="course-list">
-                <li>APDEV: App Development</li>
-                <li>102: Human Computer Interaction</li>
-                <li>103: Automata Theory</li>
-                <li>103: Web Systems & Technologies</li>
-                <li>103: Mobile Computing</li>
-            </ul>
-        </footer>
-    </main>
+    </table>
+  </section>
+  <footer>
+    <h2>Course List</h2>
+    <ul>
+      <li><strong>CS 311:</strong> Automata Theory and Formal Languages</li>
+      <li><strong>CS 312:</strong> Mobile Computing</li>
+      <li><strong>IT 314:</strong> Web Systems and Technologies</li>
+      <li><strong>CS 415:</strong> Principles of Operating Systems</li>
+    </ul>
+  </footer>
 </body>
 </html>
